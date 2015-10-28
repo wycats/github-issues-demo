@@ -8,14 +8,16 @@
 </div>
 
 <ul class="repo-issues">
+  {{#each model.issues as |issue|}}
   <li>
     {{fa-icon icon="bug"}}
-    <div class="comments">{{fa-icon icon="comment-o"}} 10</div>
-    <h3><a href="#TODO">Splat operator</a></h3>
+    <div class="comments">{{fa-icon icon="comment-o"}} {{issue.comments}}</div>
+    <h3><a href="#TODO">{{issue.title}}</a></h3>
     <p class="details">
-      #1050 opened 2015-10-18T05:05:04Z by <a href="#TODO">mixonic</a>
+      #{{issue.number}} opened {{moment-from-now issue.created_at}} by <a href="#TODO">{{issue.user.login}}</a>
     </p>
   </li>
+  {{/each}}
 </ul>
 
 {{outlet}}
