@@ -7,7 +7,7 @@
       <li>{{fa-icon icon="code-fork"}} {{repo.forks_count}}</li>
       <li>{{fa-icon icon="bug"}} {{repo.open_issues_count}}</li>
     </ul>
-    <h3><a href="#TODO">{{repo.name}}</a></h3>
+    <h3>{{#link-to "user.repo" repo.name}}{{repo.name}}{{/link-to}}</h3>
     {{#if repo.description}}
       <p class="description">The source for {{repo.description}}</p>
     {{/if}}

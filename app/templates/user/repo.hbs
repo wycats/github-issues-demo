@@ -1,9 +1,9 @@
 <div class="repo-header">
   <h1>
     {{fa-icon icon="book"}}
-    <span class="user"><a href="#TODO">{{model.owner.login}}</a></span>
+    <span class="user">{{#link-to "user"}}{{model.owner.login}}{{/link-to}}</span>
     /
-    <span class="repo"><a href="#TODO">{{model.name}}</a></span>
+    <span class="repo">{{#link-to "user.repo"}}{{model.name}}{{/link-to}}</span>
   </h1>
 </div>
 
