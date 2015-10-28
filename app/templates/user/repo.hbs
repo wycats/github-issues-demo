@@ -7,17 +7,4 @@
   </h1>
 </div>
 
-<ul class="repo-issues">
-  {{#each model.issues as |issue|}}
-  <li>
-    {{fa-icon icon="bug"}}
-    <div class="comments">{{fa-icon icon="comment-o"}} {{issue.comments}}</div>
-    <h3><a href="#TODO">{{issue.title}}</a></h3>
-    <p class="details">
-      #{{issue.number}} opened {{moment-from-now issue.created_at}} by <a href="#TODO">{{issue.user.login}}</a>
-    </p>
-  </li>
-  {{/each}}
-</ul>
-
 {{outlet}}

@@ -1,0 +1,25 @@
+<div class="issue-header">
+  <h2>{{model.title}} <span class="number">#{{model.number}}</span></h2>
+  <p class="details">
+    <span class="user"><a href="#TODO">{{model.user.login}}</a></span>
+    opened this issue {{moment-from-now model.created_at}}
+  </p>
+</div>
+
+<div class="issue-comments">
+  <div>
+    {{#link-to "user" model.user.login}}
+      <img class="avatar" height="48" width="48" src="{{model.user.avatar_url}}&amp;s=96">
+    {{/link-to}}
+
+    <div class="comment">
+      <p class="comment-header">
+        <span class="user">{{#link-to "user" model.user.login}}{{model.user.login}}{{/link-to}}</span>
+        commented {{moment-from-now model.created_at}}
+      </p>
+      <div class="comment-body">
+        {{model.body}}
+      </div>
+    </div>
+  </div>
+</div>
