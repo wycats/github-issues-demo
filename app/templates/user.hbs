@@ -29,23 +29,5 @@
       <li class="active">{{fa-icon icon="book"}} Repositories <span class="badge">{{model.public_repos}}</span></li>
     </ul>
   </div>
-  <ul class="user-repos">
-    {{#each model.repos as |repo|}}
-    <li>
-      <ul class="repo-info">
-        <li>CSS</li>
-        <li><i class="fa fa-star"></i> 151</li>
-        <li><i class="fa fa-code-fork"></i> 415</li>
-        <li><i class="fa fa-bug"></i> 29</li>
-      </ul>
-      <h3><a href="#TODO">{{repo.name}}</a></h3>
-      {{#if repo.description}}
-        <p class="description">The source for {{repo.description}}</p>
-      {{/if}}
-      <p class="updated">Updated 2015-10-27T20:09:06Z</p>
-    </li>
-    {{/each}}
-  </ul>
+  {{outlet}}
 </div>
-
-{{outlet}}

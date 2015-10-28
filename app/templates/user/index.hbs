@@ -1,0 +1,17 @@
+<ul class="user-repos">
+  {{#each model.repos as |repo|}}
+  <li>
+    <ul class="repo-info">
+      {{#if repo.language}}<li>{{repo.language}}</li>{{/if}}
+      <li>{{fa-icon icon="star"}} {{repo.stargazers_count}}</li>
+      <li>{{fa-icon icon="code-fork"}} {{repo.forks_count}}</li>
+      <li>{{fa-icon icon="bug"}} {{repo.open_issues_count}}</li>
+    </ul>
+    <h3><a href="#TODO">{{repo.name}}</a></h3>
+    {{#if repo.description}}
+      <p class="description">The source for {{repo.description}}</p>
+    {{/if}}
+    <p class="updated">Updated {{moment-from-now repo.pushed_at}}</p>
+  </li>
+  {{/each}}
+</ul>
