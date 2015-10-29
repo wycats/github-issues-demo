@@ -25,6 +25,7 @@
     "ember-cli-babel": "^5.1.3",
     "ember-cli-content-security-policy": "0.4.0",
     "ember-cli-dependency-checker": "^1.0.1",
+    "ember-cli-emoji": "0.0.3",
     "ember-cli-font-awesome": "1.1.1",
     "ember-cli-htmlbars": "0.7.9",
     "ember-cli-htmlbars-inline-precompile": "^0.2.0",
@@ -38,6 +39,7 @@
     "ember-cli-uglify": "^1.2.0",
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.3",
+    "ember-marked": "git://github.com/wycats/ember-marked.git#3217f14a8b631008af3a6e99d0d95bc017a55d90",
     "ember-moment": "4.1.0"
   }
 }
